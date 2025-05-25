@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<head>
+  <html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3b82f6",
+            secondary: "#64748b",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="navbar">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between backdrop-blur-sm bg-white/80">
+      <a href="#hero" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projects</a>
+        <a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Skills</a>
+        <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+
+        <a href="\Aakash_CV.pdf" download="Aakash_CV.pdf"
+          class="bg-primary text-white px-5 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+          Download CV
+        </a>
+      </div>
+
+      <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="menu-toggle">
+        <i class="ri-menu-line ri-lg"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="fixed inset-0 bg-black/50 z-50 nav-backdrop" id="nav-backdrop"></div>
+  <div class="fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg mobile-nav" id="mobile-nav">
+    <div class="p-6">
+      <div class="flex justify-end">
+        <button class="w-10 h-10 flex items-center justify-center text-gray-700" id="close-menu">
+          <i class="ri-close-line ri-lg"></i>
+        </button>
+      </div>
+      <div class="mt-8 flex flex-col space-y-6">
+        <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+        <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+        <button
+          class="bg-primary text-white px-5 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+          Download CV
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center relative" style="
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+      ">
+    <div class="container mx-auto px-6 py-20">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+          <span class="block">Hello, I'm</span>
+          <span class="text-primary">Aakash Kumar</span>
+        </h1>
+        <h2 class="text-2xl md:text-3xl text-gray-600 mb-8 fade-in" style="animation-delay: 0.2s">
+          Aspiring Web Developer
+        </h2>
+        <p class="text-lg text-gray-600 mb-10 max-w-2xl fade-in" style="animation-delay: 0.4s">
+          As I develop my skills in back-end development, my goal is to
+          contribute effectively to engaging digital experiences with
+          functional and well-structured solutions.
+        </p>
+        <div class="flex flex-wrap gap-4 fade-in" style="animation-delay: 0.6s">
+          <a href="#projects"
+            class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">View
+            My Work</a>
+          <a href="#contact"
+            class="bg-white text-primary border border-primary px-6 py-3 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap">Get
+            In Touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
+      <div class="w-8 h-12 flex items-center justify-center border-2 border-gray-400 rounded-full">
+        <div class="w-1.5 h-3 bg-gray-400 rounded-full"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">
+          Featured Projects
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto fade-in">
+          A selection of my recent work across web development, design, and
+          interactive experiences.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card bg-white rounded shadow-md overflow-hidden fade-in">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20with%20clean%20design%2C%20product%20displays%2C%20shopping%20cart%20functionality%2C%20user-friendly%20navigation%2C%20responsive%20layout%2C%20high-quality%20product%20images%2C%20minimalist%20aesthetic%2C%20professional%20web%20design&width=600&height=400&seq=1&orientation=landscape"
+              alt="E-commerce Platform" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+            <p class="text-gray-600 mb-4">
+              A complete online shopping solution with advanced filtering,
+              cart functionality, and secure checkout.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">React</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Node.js</span>
+              <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">MongoDB</span>
+            </div>
+            <a href="#" class="text-primary font-medium flex items-center">
+              View Project
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card bg-white rounded shadow-md overflow-hidden fade-in">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=mobile%20app%20dashboard%20interface%20with%20data%20visualization%2C%20user%20statistics%2C%20activity%20tracking%2C%20modern%20UI%20design%2C%20clean%20layout%2C%20analytics%20graphs%2C%20performance%20metrics%2C%20professional%20mobile%20application%20design&width=600&height=400&seq=2&orientation=landscape"
+              alt="Analytics Dashboard" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+            <p class="text-gray-600 mb-4">
+              Real-time data visualization dashboard for monitoring business
+              metrics and user behavior.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Vue.js</span>
+              <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">D3.js</span>
+              <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full">Firebase</span>
+            </div>
+            <a href="#" class="text-primary font-medium flex items-center">
+              View Project
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card bg-white rounded shadow-md overflow-hidden fade-in">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=mobile%20fitness%20application%20interface%20with%20workout%20tracking%2C%20progress%20charts%2C%20exercise%20library%2C%20clean%20modern%20design%2C%20user-friendly%20navigation%2C%20health%20metrics%20visualization%2C%20activity%20logs%2C%20professional%20mobile%20app%20design&width=600&height=400&seq=3&orientation=landscape"
+              alt="Fitness App" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Fitness Mobile App</h3>
+            <p class="text-gray-600 mb-4">
+              Comprehensive fitness tracking application with workout plans,
+              progress tracking, and social features.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">React Native</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">GraphQL</span>
+              <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded-full">AWS</span>
+            </div>
+            <a href="#" class="text-primary font-medium flex items-center">
+              View Project
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card bg-white rounded shadow-md overflow-hidden fade-in">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=corporate%20website%20design%20with%20professional%20layout%2C%20about%20us%20section%2C%20services%20overview%2C%20team%20profiles%2C%20contact%20information%2C%20modern%20business%20aesthetic%2C%20responsive%20design%2C%20clean%20typography%2C%20professional%20web%20design&width=600&height=400&seq=4&orientation=landscape"
+              alt="Corporate Website" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Corporate Website</h3>
+            <p class="text-gray-600 mb-4">
+              Modern, responsive website for a financial services company with
+              custom CMS integration.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">WordPress</span>
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">SASS</span>
+              <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">JavaScript</span>
+            </div>
+            <a href="#" class="text-primary font-medium flex items-center">
+              View Project
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card bg-white rounded shadow-md overflow-hidden fade-in">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=educational%20platform%20interface%20with%20online%20courses%2C%20learning%20modules%2C%20student%20dashboard%2C%20progress%20tracking%2C%20video%20lessons%2C%20quiz%20system%2C%20clean%20educational%20design%2C%20modern%20e-learning%20platform%2C%20professional%20web%20application%20design&width=600&height=400&seq=5&orientation=landscape"
+              alt="Learning Platform" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Learning Platform</h3>
+            <p class="text-gray-600 mb-4">
+              Interactive e-learning platform with course management, video
+              lessons, and progress tracking.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Angular</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Express</span>
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">PostgreSQL</span>
+            </div>
+            <a href="#" class="text-primary font-medium flex items-center">
+              View Project
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card bg-white rounded shadow-md overflow-hidden fade-in">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=social%20media%20application%20interface%20with%20user%20profiles%2C%20news%20feed%2C%20messaging%20features%2C%20photo%20sharing%2C%20comment%20system%2C%20modern%20social%20network%20design%2C%20clean%20UI%20layout%2C%20engagement%20metrics%2C%20professional%20web%20application%20design&width=600&height=400&seq=6&orientation=landscape"
+              alt="Social Network" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Social Network</h3>
+            <p class="text-gray-600 mb-4">
+              Community platform with profiles, real-time messaging, content
+              sharing, and notifications.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Next.js</span>
+              <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">Socket.io</span>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">MongoDB</span>
+            </div>
+            <a href="#" class="text-primary font-medium flex items-center">
+              View Project
+              <i class="ri-arrow-right-line ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 fade-in">
+        <a href="#" class="inline-flex items-center text-primary font-medium text-lg">
+          View All Projects
+          <i class="ri-arrow-right-line ml-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">My Skills</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto fade-in">
+          A comprehensive overview of my technical expertise and professional
+          capabilities.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Frontend Skills -->
+        <div class="bg-white p-8 rounded shadow-md fade-in">
+          <div class="w-16 h-16 flex items-center justify-center bg-blue-100 text-primary rounded-full mb-6 mx-auto">
+            <i class="ri-code-s-slash-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-6">
+            Frontend Development
+          </h3>
+
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">HTML/CSS</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">JavaScript</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">React</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Vue.js</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Tailwind CSS</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="bg-white p-8 rounded shadow-md fade-in">
+          <div class="w-16 h-16 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 mx-auto">
+            <i class="ri-server-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-6">
+            Backend Development
+          </h3>
+
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Node.js</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Express</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">MongoDB</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">PostgreSQL</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">GraphQL</span>
+                <span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Skills -->
+        <div class="bg-white p-8 rounded shadow-md fade-in">
+          <div
+            class="w-16 h-16 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full mb-6 mx-auto">
+            <i class="ri-palette-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-center mb-6">
+            Design & Tools
+          </h3>
+
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Figma</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Adobe XD</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">UI/UX Design</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Git/GitHub</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-medium">Responsive Design</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Skills -->
+      <div class="mt-16 bg-white p-8 rounded shadow-md fade-in">
+        <h3 class="text-xl font-semibold mb-6 text-center">
+          Additional Expertise
+        </h3>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-test-tube-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">Unit Testing</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-cloud-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">AWS Services</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-terminal-box-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">CI/CD</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-database-2-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">RESTful APIs</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-speed-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">Performance Optimization</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-layout-grid-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">Responsive Design</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-file-search-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">SEO Optimization</span>
+          </div>
+
+          <div class="flex items-center p-3 border border-gray-200 rounded">
+            <div class="w-10 h-10 flex items-center justify-center text-primary">
+              <i class="ri-user-voice-line ri-lg"></i>
+            </div>
+            <span class="ml-3 text-gray-700">Accessibility</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">
+          Get In Touch
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto fade-in">
+          Have a project in mind or want to discuss potential opportunities?
+          I'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Contact Info -->
+        <div class="fade-in">
+          <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center text-primary mt-1">
+                <i class="ri-mail-line ri-lg"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-medium text-gray-800">Email</h4>
+                <p class="text-gray-600 mt-1">aakashkumar10th@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center text-primary mt-1">
+                <i class="ri-map-pin-line ri-lg"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-medium text-gray-800">Location</h4>
+                <p class="text-gray-600 mt-1">
+                  Ghaziabad, Uttar Pradesh, India
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center text-primary mt-1">
+                <i class="ri-time-line ri-lg"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="font-medium text-gray-800">Working Hours</h4>
+                <p class="text-gray-600 mt-1">
+                  Monday - Friday, 9:00 AM - 6:00 PM PST
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-xl font-semibold mb-6">Connect With Me</h3>
+            <div class="flex space-x-4">
+              <a href="https://www.linkedin.com/in/aakash-kumar-10th/"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary hover:text-white transition-colors">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="https://github.com/AakashKumar01"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary hover:text-white transition-colors">
+                <i class="ri-github-fill"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary hover:text-white transition-colors">
+                <i class="ri-twitter-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="fade-in">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" id="name"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Your name" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Your email address" />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input type="text" id="subject"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Subject of your message" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Your message"></textarea>
+            </div>
+
+            <div class="flex items-center">
+              <input type="checkbox" id="newsletter" class="mr-2" />
+              <label for="newsletter" class="text-sm text-gray-600">Subscribe to my newsletter for updates on new
+                projects and
+                articles</label>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-primary text-white py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <a href="#hero" class="text-2xl font-['Pacifico'] text-white">logo</a>
+          <p class="mt-2 text-gray-400 max-w-md">
+            Building robust and functional digital experiences through
+            well-structured code and efficient logic.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
+          <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+          <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+          <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <hr class="border-gray-700 my-8" />
+
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          &copy; 2025 Aakash Kumar. All rights reserved.
+        </p>
+
+        <div class="mt-4 md:mt-0 flex items-center space-x-4">
+          <a href="https://www.linkedin.com/in/aakash-kumar-10th/"
+            class="text-gray-400 hover:text-white transition-colors">
+            <i class="ri-linkedin-fill"></i>
+          </a>
+          <a href="https://github.com/AakashKumar01" class="text-gray-400 hover:text-white transition-colors">
+            <i class="ri-github-fill"></i>
+          </a>
+          <a href="https://x.com/aakash_dev_" class="text-gray-400 hover:text-white transition-colors">
+            <i class="ri-twitter-fill"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
