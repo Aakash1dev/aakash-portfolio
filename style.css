@@ -194,7 +194,7 @@ input:checked+.switch-slider:before {
 .logo {
   background-color: transparent; /* ensures no background color */
   display: block; /* removes small gaps below images */
-  width: 60px; /* Adjust size as needed */
-  height: 60px;
+  width: 10px; /* Adjust size as needed */
+  height: 10px;
   margin-right: 10px;
 }
