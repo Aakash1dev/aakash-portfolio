@@ -195,6 +195,6 @@ input:checked+.switch-slider:before {
   background-color: transparent; /* ensures no background color */
   display: block; /* removes small gaps below images */
   width: 60px; /* Adjust size as needed */
-  height: auto;
+  height: 60px;
   margin-right: 10px;
 }
