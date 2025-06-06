@@ -191,3 +191,10 @@ input:checked+.switch-slider:before {
     font-size: 0.875rem;
     margin-top: 0.5rem;
 }
+.logo {
+  background-color: transparent; /* ensures no background color */
+  display: block; /* removes small gaps below images */
+  width: 60px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px;
+}
